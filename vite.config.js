@@ -19,8 +19,8 @@ export default mergeConfig(
     build: {
       rollupOptions: {
         input: {
-          main: resolve(currentDir, "src", "index.html"),
-          hash: resolve(currentDir, "src", "index.hash.html"),
+          main: resolve(currentDir, "index.html"),
+          hash: resolve(currentDir, "index.hash.html"),
         },
       },
     },
