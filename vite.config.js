@@ -1,8 +1,8 @@
 import { defineConfig as defineTestConfig, mergeConfig } from "vitest/config";
 import { defineConfig } from "vite";
-import { resolve, dirname } from "path";
+import { resolve } from "path";
 
-const currentDir = dirname(new URL(import.meta.url).pathname);
+const currentDir = __dirname;
 
 export default mergeConfig(
   defineConfig({
