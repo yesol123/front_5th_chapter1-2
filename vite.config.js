@@ -2,6 +2,8 @@ import { defineConfig as defineTestConfig, mergeConfig } from "vitest/config";
 import { defineConfig } from "vite";
 import { resolve, dirname } from "path";
 
+const currentDir = dirname(new URL(import.meta.url).pathname);
+
 export default mergeConfig(
   defineConfig({
     base: "/front_5th_chapter1-2/",
@@ -17,8 +19,8 @@ export default mergeConfig(
     build: {
       rollupOptions: {
         input: {
-          main: resolve(dirname, "index.html"),
-          hash: resolve(dirname, "index.hash.html"),
+          main: resolve(currentDir, "src", "index.html"),
+          hash: resolve(currentDir, "src", "index.hash.html"),
         },
       },
     },
